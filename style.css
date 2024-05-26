@@ -1,0 +1,145 @@
+html {
+    background: #01ed77 ;
+    background-size: cover;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+  }
+
+  /*
+  "This CSS block is responsible for styling the HTML elements of our webpage.
+
+First, we set the background of the HTML document. We're using a combination of a solid color #018DED and a background image fetched from the URL https://unsplash.it/1500/1000?image=881&blur=5. The image is blurred slightly using the blur parameter in the URL, creating a subtle visual effect.
+
+Next, we ensure that the background image covers the entire viewport with background-size: cover, so it fills the entire background without repeating.
+
+We specify the font family for the entire document using 'helvetica neue', a commonly used sans-serif font.
+
+The text-align: center property centers the text content horizontally within their containers.
+
+Finally, we set the base font size to 10px, which affects the size of text elements throughout the page. This is often used for defining relative font sizes using rem units."
+  
+  */
+
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+  /*
+  
+  "This CSS block targets the <body> element of our webpage, defining its styling.
+
+We start by removing any default margin from the body element with margin: 0, ensuring that there is no unwanted space around the edges of the page.
+
+Next, we set the font size to 2rem, which means it's twice the size of the root element's font size. This ensures a consistent and comfortable reading experience for users.
+
+The display: flex property makes the body element a flex container, allowing us to use flexbox layout techniques to arrange its child elements.
+
+By setting flex: 1, we ensure that the body element expands to fill the available vertical space within its container. This is particularly useful for ensuring that the content of the page stretches to occupy the entire viewport height, regardless of the content size.
+
+min-height: 100vh ensures that the body element is at least 100% of the viewport height, ensuring that the content is always visible, even if it's shorter than the viewport.
+
+Finally, align-items: center centers the content vertically within the body element using the flexbox alignment property."
+  */
+
+  .clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+      0 0 0 4px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 3px #EFEFEF,
+      inset 0 0 10px black,
+      0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+  /*
+      "This CSS block styles the .clock class, which represents our clock face.
+
+width: 30rem; and height: 30rem;: These properties set the clock's width and height to 30 rem units, ensuring the clock has a consistent, square dimension.
+
+border: 20px solid white;: This property adds a solid white border of 20 pixels around the clock, giving it a distinct and clean frame.
+
+border-radius: 50%;: This property makes the clock round by setting the border radius to 50%, transforming the square div into a circle.
+
+margin: 50px auto;: This centers the clock horizontally within its container by setting the margin on the top and bottom to 50 pixels and the left and right to auto.
+
+position: relative;: This establishes a positioning context for the clock hands, allowing us to position them absolutely within the clock.
+
+padding: 2rem;: This adds 2 rem units of padding inside the clock, ensuring that the hands have some space from the edge.
+
+box-shadow:: This property adds multiple layers of shadow effects to enhance the clock's appearance:
+
+0 0 0 4px rgba(0,0,0,0.1),: Adds a subtle outer shadow to the clock border.
+inset 0 0 0 3px #EFEFEF,: Adds an inner border to give a raised look inside the clock.
+inset 0 0 10px black,: Adds a darker inner shadow for depth.
+0 0 10px rgba(0,0,0,0.2);: Adds a soft outer shadow to give the clock a floating effect."
+  */
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+  }
+
+
+/*
+  "This CSS block styles the .clock-face class, which is the container for the clock hands.
+
+position: relative;: This property sets the .clock-face element to be positioned relatively. This allows the child elements (the clock hands) to be positioned absolutely within this container.
+
+width: 100%; and height: 100%;: These properties ensure that the .clock-face element occupies the full width and height of its parent container, which is the .clock element. This ensures that the clock face fills the entire clock.
+
+transform: translateY(-3px);: This property slightly shifts the .clock-face element upwards by 3 pixels. This is done to account for the height of the clock hands, ensuring that they are perfectly centered within the clock face. Without this adjustment, the hands might appear slightly off-center due to their own height."
+
+*/
+
+
+  .hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+
+
+  /*
+  "This CSS block styles the .hand class, which is used for the clock hands.
+
+width: 50%;: This sets the width of the clock hands to 50% of the .clock-face container's width, ensuring they reach halfway across the clock face.
+
+height: 6px;: This sets the height of the clock hands to 6 pixels, giving them a consistent thickness.
+
+background: black;: This gives the clock hands a black color.
+
+position: absolute;: This allows the clock hands to be positioned absolutely within the .clock-face container. This is necessary for placing them correctly relative to the center of the clock.
+
+top: 50%;: This positions the top of the clock hands at the vertical center of the .clock-face container.
+
+transform-origin: 100%;: This ensures that the hands rotate around their end that is attached to the center of the clock.
+
+transform: rotate(90deg);: This initially rotates the hands 90 degrees to ensure they start from the correct position, pointing straight up.
+
+transition: all 0.05s;: This sets a transition effect for all properties, with a duration of 0.05 seconds. This makes the movement of the clock hands appear smooth.
+
+transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);: This defines the timing function for the transition, using a custom cubic-bezier curve. This creates a specific easing effect for the movement of the clock hands, making their motion more natural and visually appealing."
+
+
+  
+  */
